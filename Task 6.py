@@ -1,5 +1,5 @@
 def lowertoupper(lowerline):
-    lowerline=lowerline.lower()
+	lowerline=lowerline.lower()
 	words=lowerline.split()
 	lowerline=""
 	for i in words:
