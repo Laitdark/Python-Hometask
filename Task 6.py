@@ -1,17 +1,11 @@
 def lowertoupper(lowerline):
-    lowerline = lowerline[:1].swapcase() + lowerline[1:]
-    return lowerline
-
-
-baseline = input("Введите слово из латинских букв: ")
-baseline = baseline.lower()
+    lowerline=lowerline.lower()
+	words=lowerline.split()
+	lowerline=""
+	for i in words:
+		i = i[:1].swapcase() + i[1:]
+		lowerline=lowerline+i+" "
+	return lowerline
+baseline = input("Введите текст из латинских букв: ")
 baseline = lowertoupper(baseline)
 print(baseline)
-longline = input("Введите более длинную строку: ")
-longline = longline.lower()
-longlinelist = longline.split()
-longline = ""
-for i in longlinelist:
-    i = lowertoupper(i)
-    longline = longline + i + " "
-print(longline)
