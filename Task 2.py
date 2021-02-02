@@ -7,7 +7,7 @@ class Road:
         self._roadgirth = 5
 
     def asphaltmassammount(self):
-        asphaltmass = (self._length * self._width * self._requiredasphalt * self._roadgirth) / 1000
+        asphaltmass = self._length * self._width * self._requiredasphalt/1000 * self._roadgirth/100
         print("Необоходимо", int(asphaltmass), "т асфальта (При ", self._requiredasphalt,
               "кг асфальта на 1 кв.метр и", self._roadgirth, "см толщины полотна).")
 
