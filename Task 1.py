@@ -2,7 +2,7 @@ import time
 
 
 class TrafficLight:
-    _colour = None
+    __colour = None
     _colours = ["Red", "Green", "Yellow"]
 
     def running(self, repeatammount):
