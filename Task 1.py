@@ -1,7 +1,6 @@
 # Усложняю на ввод начала и конца пользователем
 userstart = int(input('Введите начальное число: '))
 userend = int(input('Введите конечное число: '))
-basearray = []
 divnine = 0
 divtwo = 0
 divtwoarr = []
