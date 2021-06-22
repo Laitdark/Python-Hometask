@@ -7,11 +7,7 @@ divtwo = 0
 divtwoarr = []
 divninearr = []
 
-while userstart <= userend:
-    basearray.append(userstart)
-    userstart = userstart + 1
-
-for i in basearray:
+for i in range(userstart,userend+1):
     if i % 2 == 0:
         divtwo = divtwo + 1
         divtwoarr.append(i)
