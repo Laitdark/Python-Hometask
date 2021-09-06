@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> JS Lessons</title>
+    <script>
+        function CelsiusToFarenheit() {
+            var temperature = +prompt('Please, input temp. in Celsius:');
+            alert('Celsius:' + temperature + ', Fareneheit:' + ((9 / 5) * temperature + 32));
+        }
+        function AdminName() {
+            var admin;
+            var name = 'Василий';
+            admin = name;
+            alert('Admin name is: ' + admin)
+        }
+        function Addition() {
+            var a = 1000,
+                b = '108',
+                c = a + b;
+            alert('Result of 1000 + "108": ' + c);
+        }
+        function Checkx() {
+            var a = 2;
+            var x = 1 + (a *= 2);
+            alert(x)
+        }
+        function Switcher() {
+            var a = +prompt('Input a in between[0..15]'),
+                switcheroutput = '';
+
+            switch (a) {
+                case 0: switcheroutput += (a++) + ' ';
+                case 1: switcheroutput += (a++) + ' ';
+                case 2: switcheroutput += (a++) + ' ';
+                case 3: switcheroutput += (a++) + ' ';
+                case 4: switcheroutput += (a++) + ' ';
+                case 5: switcheroutput += (a++) + ' ';
+                case 6: switcheroutput += (a++) + ' ';
+                case 7: switcheroutput += (a++) + ' ';
+                case 8: switcheroutput += (a++) + ' ';
+                case 9: switcheroutput += (a++) + ' ';
+                case 10: switcheroutput += (a++) + ' ';
+                case 11: switcheroutput += (a++) + ' ';
+                case 12: switcheroutput += (a++) + ' ';
+                case 13: switcheroutput += (a++) + ' ';
+                case 14: switcheroutput += (a++) + ' ';
+                case 15: switcheroutput += (a++) + ' ';
+            }
+
+            alert(switcheroutput);
+        }
+        function Ifs() {
+            var a = +prompt('Input a'),
+                b = +prompt('Input b'),
+                c
+            if (a >= 0 & b >= 0) {
+                c = a - b;
+            } else if (a < 0 & b < 0) {
+                c = a * b;
+            } else {
+                c = a + b;
+            }
+            alert('a = ' + a + '; b = ' + b + '; c = ' + c);
+        }
+        function Functions() {
+            var a = Math.floor(Math.random() * 100),
+                b = Math.floor(Math.random() * 100);
+
+            function plus(a, b) {
+                return a + b;
+            }
+
+            function minus(a, b) {
+                return a - b;
+            }
+
+            function div(a, b) {
+                return a / b;
+            }
+
+            function mult(a, b) {
+                return a * b;
+            }
+            alert('a (random) = ' + a +
+                '\nb (random) = ' + b +
+                '\na + b = ' + plus(a, b) +
+                '\na - b = ' + minus(a, b) +
+                '\na * b = ' + mult(a, b) +
+                '\na / b = ' + div(a, b).toFixed(4));
+        }
+        function OverfuncMathOp() {
+            var a = +prompt('Input arg1'),
+                b = +prompt('Input arg2'),
+                ops = prompt('Input operation (+,-,*,/)');
+
+            function mathOperation(arg1, arg2, operation) {
+                switch (operation) {
+                    case '+':
+                        return arg1 + arg2;
+                        break;
+                    case '-':
+                        return arg1 - arg2;
+                        break;
+                    case '/':
+                        return arg1 / arg2;
+                        break;
+                    case '*':
+                        return arg1 * arg2;
+                        break;
+                }
+            }
+            alert(mathOperation(a, b, ops))
+        }
+        function Exponentation() {
+            var val = +prompt('Input the number'),
+                pow = +prompt('Input the power');
+
+            function power(val, pow) {
+                if (pow == 0)
+                    return 1;
+                else
+                    return val * power(val, pow - 1);
+            }
+            alert('Number: ' + val + ' Power: ' + pow + ' Result: ' + power(val, pow));
+        }
+    </script>
+
+
+</head>
+
+<body>
+    <h1>Lesson 1</h1>
+    <ul>
+        <li><a href="#" onclick="CelsiusToFarenheit();">Task 1: Temperature</a></li>
+        <li><a href="#" onclick="AdminName();">Task 2: Admin Name</a></li>
+        <li><a href="#" onclick="Addition();">Task 3: 1000+108</a></li>
+    </ul>
+    <h3>Task 4:</h3>
+    <p>Async: Поддерживается всеми браузерами, кроме IE9-. Скрипт выполняется полностью асинхронно. То есть, при
+        обнаружении async браузер не останавливает обработку страницы, а спокойно работает дальше. Когда скрипт будет
+        загружен – он выполнится.
+    </p>
+    <p>Defer: Поддерживается всеми браузерами, включая самые старые IE. Скрипт также выполняется асинхронно, не
+        заставляет ждать страницу, но есть два отличия от async.
+    </p>
+    <ul>
+        <li>Первое – браузер гарантирует, что относительный порядок скриптов с defer будет сохранён.</li>
+        <li>Второе отличие – скрипт с defer сработает, когда весь HTML-документ будет обработан браузером.</li>
+    </ul>
+    <hr>
+    <h1>Lesson 2</h1>
+    <h3>Task 1:</h3>
+    <p>Baseline: var a = 1, b = 1, c, d;</p>
+    <ol>
+        <li>c = ++a; alert(c); // 2 - ++ в префиксе означает добавление единицы и использование ее текущего значения
+            (для с a=2)</li>
+        <li>d = b++; alert(d); // 1 - ++ в суффиксе означает добавление единицы и использования предыдущего значения
+            переменной (для d b=1, хоть и по факту оно уже 2)</li>
+        <li>c = (2+ ++a); alert(c); // 5 - Аналогично первому, сначала добавляем единицу, получаем для с a=3, 3+2=5</li>
+        <li>d = (2+ b++); alert(d); // 4 - Аналогично второму. b становится 3, хоть d и все еще воспринимает его как 2,
+            2+2=4 </li>
+        <li>alert(a); alert(b); // 3 - И суффикс, и префикс все равно увеличивали значения a и b</li>
+    </ol>
+    <li><a href="#" onclick="Checkx();">Task 2: Check X</a></li>
+    <p>*= сокращенный оператор, означающий умножение самого себя на вторую переменную. То есть х=1+(a=a*2)=5</p>
+    <li><a href="#" onclick="Ifs();">Task 3: IFs</a></li>
+    <li><a href="#" onclick="Switcher();">Task 4: Switcher</a></li>
+    <li><a href="#" onclick="Functions();">Task 5: Functions</a></li>
+    <li><a href="#" onclick="OverfuncMathOp();">Task 6: MathOps</a></li>
+    <h3>Task 7:</h3>
+    <p>Элементы нельзя сравнить. 0 - число, с ним можно проводить математические операции. Null - значение отсутствия
+        значения, оно может
+        означать, что значение не введено, операции с ним проводить нельзя</p>
+    <li><a href="#" onclick="Exponentation();">Task 8: Exponentation</a></li>
+</body>
+
+</html>
