@@ -5,27 +5,32 @@
     <meta charset="utf-8">
     <title> JS Lessons</title>
     <script>
+        //L1 T1
         function CelsiusToFarenheit() {
             var temperature = +prompt('Please, input temp. in Celsius:');
             alert('Celsius:' + temperature + ', Fareneheit:' + ((9 / 5) * temperature + 32));
         }
+        //L1 T2
         function AdminName() {
             var admin;
             var name = 'Василий';
             admin = name;
             alert('Admin name is: ' + admin)
         }
+        //L1 T3
         function Addition() {
             var a = 1000,
                 b = '108',
                 c = a + b;
             alert('Result of 1000 + "108": ' + c);
         }
+        //L2 T2
         function Checkx() {
             var a = 2;
             var x = 1 + (a *= 2);
             alert(x)
         }
+        //L2 T4
         function Switcher() {
             var a = +prompt('Input a in between[0..15]'),
                 switcheroutput = '';
@@ -51,6 +56,7 @@
 
             alert(switcheroutput);
         }
+        //L2 T3
         function Ifs() {
             var a = +prompt('Input a'),
                 b = +prompt('Input b'),
@@ -64,6 +70,7 @@
             }
             alert('a = ' + a + '; b = ' + b + '; c = ' + c);
         }
+        //L2 T5
         function Functions() {
             var a = Math.floor(Math.random() * 100),
                 b = Math.floor(Math.random() * 100);
@@ -90,6 +97,7 @@
                 '\na * b = ' + mult(a, b) +
                 '\na / b = ' + div(a, b).toFixed(4));
         }
+        //L2 T6
         function OverfuncMathOp() {
             var a = +prompt('Input arg1'),
                 b = +prompt('Input arg2'),
@@ -113,6 +121,7 @@
             }
             alert(mathOperation(a, b, ops))
         }
+        //L2 T8
         function Exponentation() {
             var val = +prompt('Input the number'),
                 pow = +prompt('Input the power');
@@ -124,6 +133,89 @@
                     return val * power(val, pow - 1);
             }
             alert('Number: ' + val + ' Power: ' + pow + ' Result: ' + power(val, pow));
+        }
+        //L3 T3
+        function ForScript() {
+            var i = 0,
+                result = 'Result: ';
+            for (i = 0; i <= 9; result += i + ', ', i++) { }
+            alert(result);
+        }
+        //L3 T1
+        function WhileScript() {
+            var i = 0,
+                j,
+                validation,
+                result = 'Result: ';
+
+            do {
+                j = 1;
+
+                while (j < i) {
+                    if (i % j == 0 && j != 1) {
+                        validation = false;
+                        break;
+                    } else {
+                        validation = true;
+                    }
+                    j++;
+                };
+
+                if (validation) {
+                    result += i + ', ';
+                }
+            } while (++i <= 100);
+            alert(result)
+        }
+        //L3 T4
+        function ConsoleScript() {
+            var totalNumberofRows = 20;
+            var output = '';
+            for (var i = 1; i <= totalNumberofRows; i++) {
+                for (var j = 1; j <= i; j++) {
+                    output += '*';
+                }
+                console.log(output);
+                output = '';
+            }
+        }
+        //L3 T2
+        function ShoppingCart() {
+            var shoppingcart = 0;
+            var ourcart = []
+            function AddGood() {
+                var stopper = '',
+                    cart = []
+                while (true) {
+                    stopper = +prompt('Type the number of the good (To stop, type "0")')
+                    if (stopper == '1') {
+                        cart.push({ name: 'Shirt', price: 600 })
+                    }
+                    if (stopper == '2') {
+                        cart.push({ name: 'Jeans', price: 500 })
+                    }
+                    if (stopper == '3') {
+                        cart.push({ name: 'T-Shirt', price: 350 })
+                    }
+                    if (stopper == '0') {
+                        break;
+                    }
+                }
+                return cart
+            }
+            ourcart = AddGood();
+            function countcartPrice(x) {
+                for (i = 0; i < ourcart.length; i++) {
+                    shoppingcart = shoppingcart + ourcart[i].price;
+                }
+                return shoppingcart;
+            }
+            document.write('Cart Contains: </br>');
+            for (i = 0; i < ourcart.length; i++) {
+                document.write(ourcart[i].name + ' — ' + ourcart[i].price + ' UAH</br>');
+            }
+            document.write('Cart Price: ' + countcartPrice(ourcart) + ' UAH</br>');
+
         }
     </script>
 
@@ -174,6 +266,13 @@
         значения, оно может
         означать, что значение не введено, операции с ним проводить нельзя</p>
     <li><a href="#" onclick="Exponentation();">Task 8: Exponentation</a></li>
+    <hr>
+    <h1>Lesson 3</h1>
+    <li><a href="#" onclick="WhileScript();">Task 1: While</a></li>
+    <li><a href="#" onclick="ShoppingCart();">Task 2: Shopping Cart</a></li>
+    <p>Shopping Cart Catalogue: </br> 1. Jeans - 500 UAH, </br> 2. T-Shirt - 350 UAH, </br> 3. Shirt - 600 UAH</p>
+    <li><a href="#" onclick="ForScript();">Task 3: For</a></li>
+    <li><a href="#" onclick="ConsoleScript();">Task 4: Console Log</a></li>
 </body>
 
 </html>
