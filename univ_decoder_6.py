@@ -1,8 +1,9 @@
-import locale
-
-print(locale.getpreferredencoding())
-##cp1251
+from chardet import detect
 
 with open('test_file.txt', 'rb') as fl:
-    s = fl.read().decode(encoding="utf-8")
-    print(s)
+    content = fl.read()
+    ENCODING=detect(content)['encoding']
+
+with open('test_file.txt', 'r', encoding=ENCODING) as fl:
+    content = fl.read()
+    print(content)
