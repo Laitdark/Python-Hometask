@@ -1,5 +1,6 @@
 import os
 import yaml
+from chardet import detect
 
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 filename = os.path.join(CURRENT_DIR, 'source_data', 'file.yaml')
@@ -14,8 +15,12 @@ data = {
     }
 }
 
-with open(filename, 'w') as f_n:
+with open(filename, 'rb') as fl:
+    content = fl.read()
+    ENCODING = detect(content)['encoding']
+
+with open(filename, 'w', encoding=ENCODING) as f_n:
     yaml.dump(data, f_n, default_flow_style=False, allow_unicode=True)
 
-with open(filename) as f_n:
+with open(filename, encoding=ENCODING) as f_n:
     print(f_n.read())

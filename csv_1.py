@@ -1,6 +1,7 @@
 import os
 import re
 import csv
+from chardet import detect
 
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -13,7 +14,11 @@ def collect_data():
     for filename in source_files:
         filepath = os.path.join(data_dir, filename)
 
-        with open(filepath) as fl:
+        with open(filepath, 'rb') as fl:
+            content = fl.read()
+            ENCODING = detect(content)['encoding']
+
+        with open(filepath,  encoding=ENCODING) as fl:
             for line in fl.readlines():
                 result += re.findall(r'^(\w[^:]+).*:\s+([^:\n]+)\s*$', line)
 
@@ -46,7 +51,7 @@ def write_to_csv(filepath):
 
     filepath = os.path.join(CURRENT_DIR, dir_, filename)
 
-    with open(filepath, 'w', encoding='utf-8', newline='') as csv_file:
+    with open(filepath, 'w', encoding=ENCODING, newline='') as csv_file:
         writer = csv.writer(csv_file, delimiter=',', quoting=csv.QUOTE_NONNUMERIC)
 
         for line in data:
