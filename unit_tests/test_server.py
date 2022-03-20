@@ -1,6 +1,9 @@
+import sys
+sys.path.append('..')
 import unittest
 import socket
 import chat
+
 
 
 class TestServer(unittest.TestCase):

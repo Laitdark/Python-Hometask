@@ -1,4 +1,6 @@
-
+import os
+import sys
+sys.path.append('..')
 import unittest
 import chat
 
@@ -12,6 +14,7 @@ class TestChat(unittest.TestCase):
         chat.send_data(self.c, {'test': 'test'})
 
     def tearDown(self):
+        self.sender.close()
         self.c.close()
         self.s.close()
 
