@@ -1,0 +1,13 @@
+2022-03-28 10:24:33,952 - DEBUG    - client   - App started 
+2022-03-28 10:24:36,265 - DEBUG    - chat     - Function "get_client_socket" is called into "<module>" 
+2022-03-28 10:25:01,888 - DEBUG    - client   - App started 
+2022-03-28 10:25:04,572 - DEBUG    - chat     - Function "get_client_socket" is called into "<module>" 
+2022-03-28 10:25:04,576 - INFO     - client   - Connected to server: 127.0.0.1:7777 
+2022-03-28 10:25:04,577 - DEBUG    - chat     - Function "send_data" is called into "<module>" 
+2022-03-28 10:25:04,578 - INFO     - client   - Presence sended to ('127.0.0.1', 7777) : {'action': 'presence', 'time': '2022-03-28 10:25:01', 'type': 'status', 'user': {'account_name': '1', 'status': 'Yep, I am here!'}} 
+2022-03-28 10:25:09,058 - DEBUG    - chat     - Function "send_data" is called into "<module>" 
+2022-03-28 10:25:12,062 - DEBUG    - chat     - Function "send_data" is called into "<module>" 
+2022-03-28 10:25:14,797 - DEBUG    - chat     - Function "send_data" is called into "<module>" 
+2022-03-28 10:25:17,348 - DEBUG    - chat     - Function "send_data" is called into "<module>" 
+2022-03-28 10:25:21,509 - DEBUG    - chat     - Function "send_data" is called into "<module>" 
+2022-03-28 10:26:12,945 - DEBUG    - chat     - Function "send_data" is called into "<module>" 

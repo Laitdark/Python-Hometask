@@ -1,0 +1,16 @@
+2022-03-28 10:23:57,630 - DEBUG    - server   - App started 
+2022-03-28 10:23:57,676 - DEBUG    - chat     - Function "get_server_socket" is called into "<module>" 
+2022-03-28 10:23:57,681 - INFO     - server   - Server started at 127.0.0.1:7777 
+2022-03-28 10:24:05,433 - DEBUG    - server   - App started 
+2022-03-28 10:24:05,483 - DEBUG    - chat     - Function "get_server_socket" is called into "<module>" 
+2022-03-28 10:24:05,491 - INFO     - server   - Server started at 127.0.0.1:7777 
+2022-03-28 10:24:10,705 - DEBUG    - server   - App started 
+2022-03-28 10:24:10,740 - DEBUG    - chat     - Function "get_server_socket" is called into "<module>" 
+2022-03-28 10:24:10,745 - INFO     - server   - Server started at 127.0.0.1:7777 
+2022-03-28 10:24:17,434 - DEBUG    - server   - App started 
+2022-03-28 10:24:17,473 - DEBUG    - chat     - Function "get_server_socket" is called into "<module>" 
+2022-03-28 10:24:17,479 - INFO     - server   - Server started at 127.0.0.1:7777 
+2022-03-28 10:24:50,674 - DEBUG    - server   - App started 
+2022-03-28 10:24:50,711 - DEBUG    - chat     - Function "get_server_socket" is called into "<module>" 
+2022-03-28 10:24:50,715 - INFO     - server   - Server started at 127.0.0.1:7777 
+2022-03-28 10:25:04,577 - INFO     - server   - Client connected from 127.0.0.1:55580 
