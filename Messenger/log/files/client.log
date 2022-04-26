@@ -1,0 +1,15 @@
+2022-04-19 10:10:50,133 INFO client Status: Online!
+2022-04-26 09:33:51,190 INFO client Client None trying to connect to localhost:7777
+2022-04-26 09:38:30,920 INFO client Client Lait trying to connect to localhost:7777
+2022-04-26 09:39:38,937 INFO client Client Lait trying to connect to localhost:7777
+2022-04-26 09:39:39,212 INFO client_transport Trying to connect №1/5
+2022-04-26 09:39:39,435 ERROR client_transport User is not registered!
+2022-04-26 09:46:19,585 INFO client Client Lait trying to connect to localhost:7777
+2022-04-26 09:46:21,401 INFO client_transport Trying to connect №1/5
+2022-04-26 09:46:21,620 ERROR client_transport Wrong password!
+2022-04-26 09:47:34,914 INFO client Client Lait trying to connect to localhost:7777
+2022-04-26 09:47:34,931 INFO client_transport Trying to connect №1/5
+2022-04-26 09:47:35,153 ERROR client_transport Wrong password!
+2022-04-26 09:51:27,149 INFO client Client Lait trying to connect to localhost:7777
+2022-04-26 09:51:27,167 INFO client_transport Trying to connect №1/5
+2022-04-26 09:51:27,385 ERROR client_transport Wrong password!
